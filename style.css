@@ -1,0 +1,72 @@
+body {
+    font-family: 'Times New Roman', Times, serif; /*Tipo de letra*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /*background: linear-gradient(to bottom right, #959fe8, pink);/* Color de fondo */
+    /*Agregacion del fondo*/
+    background: url(Imagen/pexels-simon-berger-1323550.jpg);
+    background-size: cover; /**/
+    background-position: center;
+}
+#start {
+    padding: 10px 20px; /* Ajusta el tamaño del botón */
+    display: block;
+    position: relative;
+}
+#start button:hover {
+    background-color: #0292f1; /* Verde más oscuro al pasar el cursor */
+}
+
+#form{
+    padding: 20px;
+    margin: 20px auto;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px /*rgba(0, 0, 0, .2)*/; /*borde elevado en negro*/
+    /*background-color: white;*/
+    border-radius: 15px;
+    display: none;
+    text-align: center;  
+    /*video de youtube https://www.youtube.com/watch?v=hlwlM4a5rxg*/ 
+}
+
+#context {
+    background-color: #fff; /* Color de fondo para el contexto */
+    margin: 0 auto 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .2); /* Sombra suave */
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+}
+/*.button {
+    padding: 10px 20px; 
+}*/
+
+.btn-primary{
+    padding: 20px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db; /* Color de fondo para botones */
+    color: #fff; /* Color del texto para botones */
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.btn-success {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db; /* Color de fondo para botones */
+    color: #fff; /* Color del texto para botones */
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
