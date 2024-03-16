@@ -21,20 +21,32 @@ function start() {
 
 function validate() {
 	let inputs = document.querySelectorAll('input[type="text"]')
-
+	let success_counter = 0;
+	
 	inputs.forEach((elem, index) => {
 		sentence = elem.value
 
 		if (sentence != "")
-			if (reg.test(sentence))
+			if (reg.test(sentence)) {
 				mostrarSuccess(index + 1)
+				success_counter += 1;
+			}
 			else
 				mostrarError(index + 1)
 		else
 			hideMessage(index + 1)
 
+		if (index + 1 >= 5) {
+			alert(`You have done ${success_counter} success sentences of ${index + 1} writed sentences`)
+		}
 	})
 }
+
+document.addEventListener('keyup', (event) => {
+	if (event.keyCode == 13) {
+		validate()
+	}
+})
 
 function hideMessage(index) {
 	var wrong = document.getElementsByClassName(`wrong_${index}`)
