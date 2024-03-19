@@ -1,8 +1,11 @@
-var present = "Am i|Are you|Is he|Is she|Is it|Are we|Are they"
-var past = "Was i|Were you|Was he|Was she|Was it|Were they|Where we"
-var negacion = "Am not i|Aint|Are not you|Aren't you|Is not he|Isn't he|Is not she|Isn't she|Is not it|Isn't it|Are not we|Aren't we|Are not they|Aren't they"
+// var present = "Am i|Are you|Is he|Is she|Is it|Are we|Are they"
+// var past = "Was i|Were you|Was he|Was she|Was it|Were they|Where we"
+// var negacion = "Am (not)? i|Aint|Are not you|Aren't you|Is not he|Isn't he|Is not she|Isn't she|Is not it|Isn't it|Are not we|Aren't we|Are not they|Aren't they"
 
-let reg = new RegExp(`^(${negacion}|${present}${present != "" && past != "" ? "|" : ""}${past}) (.*[?.])$`)
+let exp = "((Am (not )?I)|(Are (not )?(You|We|They))|(Is (not )?(She|He|It)))(.*)?[?][.]?$"
+
+// let reg2 = new RegExp(`^(${negacion}|${present}${present != "" && past != "" ? "|" : ""}${past}) (.*[?.])$`)
+let reg = new RegExp(exp)
 
 // //no subir, son pruebas
 
@@ -22,7 +25,7 @@ function start() {
 function validate() {
 	let inputs = document.querySelectorAll('input[type="text"]')
 	let success_counter = 0;
-	
+
 	inputs.forEach((elem, index) => {
 		sentence = elem.value
 
